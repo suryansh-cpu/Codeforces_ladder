@@ -88,7 +88,12 @@ signed main(){
     int n;
     cin >> n;
     char arr[n][n];
+<<<<<<< HEAD
     int i,j;
+=======
+    int i;
+    int j;
+>>>>>>> 3578c66 (clean project with proper gitignore)
     rep(i,n)
     {
         rep(j,n)

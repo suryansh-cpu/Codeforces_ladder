@@ -1,0 +1,1 @@
+{"name":"Local: check_order","url":"/Users/macbookpro/Desktop/a2oj/summer_intern/classword 1/check_order.py","tests":[{"id":1749188354808,"input":"5\n2\n1\n3\n4\n5","output":"1 3 4 5"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/macbookpro/Desktop/a2oj/summer_intern/classword 1/check_order.py","group":"local","local":true}

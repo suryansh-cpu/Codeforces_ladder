@@ -1,0 +1,1 @@
+{"name":"Local: tryy2","url":"/Users/macbookpro/Desktop/a2oj/tryy2.cpp","tests":[{"id":1745040745625,"input":"acbde","output":"d e"},{"id":1745040917810,"input":"ace","output":"NO such elements found"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/macbookpro/Desktop/a2oj/tryy2.cpp","group":"local","local":true}
