@@ -82,7 +82,6 @@
 // #define pb push_back
 // #define rep(i,n) for(i=0;i<n;++i)
 // using namespace std;
-<<<<<<< HEAD
 
 // int min_operations_to_make_same(string s1, string s2, string s3) {
 //     int n = s1.length();
@@ -133,87 +132,6 @@
 //         cin >> s1 >> s2 >> s3;
 
 //         cout << min_operations_to_make_same(s1, s2, s3) << endl;
-=======
-// signed main(){
-//     ios::sync_with_stdio(false);
-//     cin.tie(nullptr);
-//     int t;
-// 	cin >> t;
-// 	for(int i = 0;i<t;i++)
-// 	{
-// 	    int n;
-// 	    cin >> n;
-// 	    int one=0,zero=0;
-//         int track[3]={0};
-// 	    int arr[3][n];
-//         int duplicate[3][2]={0};
-//         for (int j = 0; j < 3; j++)
-//         {
-//             int temp0=0,temp1=0;
-//             for (int k = 0; k < n; k++)
-//             {
-//                 cin >> arr[j][k];
-//                 cout << arr[j][k] << endl;
-//                 if(arr[j][k]==0)
-//                 {
-//                     zero+=1;
-//                     temp0+=1;
-//                 }
-//                 else
-//                 {
-//                     one+=1;
-//                     temp1+=1;
-//                 }
-//             }
-//             if(temp0>=temp1)
-//             {
-//                 // number.insert({j,0});
-//                 track[j]=0;
-//             }
-//             else{
-//                 // number.insert({j,1});
-//                 track[j]=1;
-//             }
-//             duplicate[j][0] = temp0;
-//             duplicate[j][1] = temp1;
-//         }
-//         // if(zero%n!=0 || one%n!=0)
-//         // {
-//         //     cout << -1 << endl;;
-//         // }
-//         // else
-//         // {
-//         //     if(zero==0 || zero == n*3)
-//         //     {
-//         //         cout << 0 << endl;
-//         //     }
-//         //     else if(zero == n)
-//         //     {
-//         //         int j;
-//         //         rep(j,3)
-//         //         {
-//         //             if(track[j]==0)
-//         //             {
-//         //                 cout << duplicate[j][1] << endl;
-//         //                 break;
-//         //             }
-//         //         }
-//         //     }
-//         //     else if(zero == n*2)
-//         //     {
-//         //         int j;
-//         //         rep(j,3)
-//         //         {
-//         //             if(track[j]==1)
-//         //             {
-//         //                 cout << duplicate[j][0] << endl;
-//         //                 break;
-//         //             }
-//         //         }
-//         //     }
-            
-//         // }
->>>>>>> 3578c66 (clean project with proper gitignore)
 //     }
 //     return 0;
 // }
@@ -301,7 +219,6 @@
 #define pb push_back
 #define rep(i,n) for(i=0;i<n;++i)
 using namespace std;
-<<<<<<< HEAD
 // // signed main(){
 //     ios::sync_with_stdio(false);
 //     cin.tie(nullptr);
@@ -359,93 +276,6 @@ signed main() {
         cin >> s1 >> s2 >> s3;
 
         cout << min_operations_to_make_same(s1, s2, s3) << endl;
-=======
-int i,j;
-signed main(){
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    int t=0;
-    // cout << 5;
-    cin >> t;
-    // t++;
-    while(t--)
-    {
-        int n;
-        cin >> n;
-        string arr[3];
-        int track[3]={0};
-        int duplicate[3][2]={0};
-        int count0=0,count1=0;
-        rep(i,3)
-        {
-            cin >> arr[i];
-            int temp0=0,temp1=0;
-            rep(j,n)
-            {
-                if(arr[i][j]=='1')
-                {
-                    count1++;
-                    temp1++;
-                }
-                else if(arr[i][j]=='0')
-                {
-                    count0++;
-                    temp0++;
-                }
-            }
-            // cout << "temp:" << temp0 << " " << n << endl;
-            if(temp0 == n || temp0 == 0)
-            {
-                // cout << "IN TRACK = -1" << endl;
-                track[i] = -1;
-            }
-            else if(temp0>=temp1)
-            {
-                track[i] = 0;
-            }
-            else
-            {
-                track[i] = 1;
-            }
-            duplicate[i][0] = temp0;
-            duplicate[i][1] = temp1;
-        }
-        // cout << "tracks " << track[0] << " " << track[1] << " " << track[2] << endl;
-        // cout << "count0=" << count0 << " " << "n*2 = " << n*2 << endl;
-        if(count0%n!=0)
-        {
-            cout << -1 << endl;
-        }
-        else if(count0 == 0 || count0 == n*3)
-        {
-            cout << 0 << endl;
-        }
-        else if(count0==n)
-        {
-            rep(j,n)
-            {
-                if(track[j]==0)
-                {
-                    // cout << "IN TRACK[i] " << track[i] << endl;
-                    cout << duplicate[j][1] << endl;
-                    break;
-                }
-            }
-        }
-        else if(count0==n*2)
-        {
-            // cout << "IN COUNT0 + N*2" << endl;
-            rep(j,n)
-            {
-                if(track[j]==0)
-                {
-                    // cout << "IN TRACK[j] " << track[j] << endl;
-                    cout << duplicate[j][0] << endl;
-                    break;
-                }
-            }
-        }
->>>>>>> 3578c66 (clean project with proper gitignore)
     }
     return 0;
 }
