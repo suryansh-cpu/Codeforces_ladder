@@ -2,7 +2,6 @@
 	"folders": [
 		{
 			"path": "."
-<<<<<<< HEAD
 		}
 	],
 	"settings": {
@@ -11,11 +10,4 @@
 			"iostream": "cpp"
 		}
 	}
-=======
-		},
-		{
-			"path": "../practice"
-		}
-	]
->>>>>>> 3578c66 (clean project with proper gitignore)
 }
