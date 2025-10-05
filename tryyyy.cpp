@@ -89,7 +89,8 @@ signed main(){
     cin >> n;
     // vector<int>pree(n,0);
     int maxx = -1;
-    for(int i = 1;i<n;i++){
+    for(int j= 1;j<n;j++){
+        int i = j;
         int steps = 0;
         while(i>1){
             if(i%2==0)i/=2;
