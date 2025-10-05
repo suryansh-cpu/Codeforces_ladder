@@ -1,13 +1,22 @@
 {
 	"folders": [
 		{
+			"name": "a2oj",
 			"path": "."
+		},
+		{
+			"name": "skill excellarator",
+			"path": "../skill excellarator"
 		}
 	],
 	"settings": {
 		"files.associations": {
-			"valarray": "cpp",
-			"iostream": "cpp"
+			"string": "cpp",
+			"set": "cpp",
+			"iostream": "cpp",
+			"initializer_list": "cpp",
+			"vector": "cpp",
+			"cstring": "cpp"
 		}
 	}
 }
