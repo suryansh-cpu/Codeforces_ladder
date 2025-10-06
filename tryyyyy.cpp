@@ -16,7 +16,7 @@ int countt(int a, int b){
         while(x--){
             pair<int,int> d = bfs.front();
             bfs.pop();
-            if(d.first == a-1 && d.second == b-1){
+            if(d.first == a && d.second == b){
                 ans++;
             }
             // else if(visited[d.first][d.second] == 1){
@@ -24,8 +24,8 @@ int countt(int a, int b){
             // }
             else{
                 // visited[d.first][d.second] = 1;
-                if(d.second+1<b)bfs.push({d.first,d.second+1});
-                if(d.first+1<a)bfs.push({d.first+1,d.second});
+                if(d.second+1<=b)bfs.push({d.first,d.second+1});
+                if(d.first+1<=a)bfs.push({d.first+1,d.second});
             }
         }
     }
