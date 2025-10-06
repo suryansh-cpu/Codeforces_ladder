@@ -191,35 +191,40 @@ signed main(){
     cin.tie(nullptr);
     int t;
     cin >> t;
+    vector<int>pre_computed(5000001,0);
+    vector<int>prefix_count(5000001,0);
+    vector<int>prefix_num(5000001,0);
+    int maxx = -1;
+    int num = 0;
+    for(int i = 1;i<5000001;i++){
+        int count = 0;
+        int a = i;
+        while(a>1){
+            if(a<5000001 && pre_computed[a]!=0){
+                count+=pre_computed[a];
+                break;
+            }
+            if((a%2) == 0){
+                a=a/2;
+            }
+            else{
+                a = a*3 + 1;
+            }
+            count++;
+        }
+        pre_computed[i] = count;
+        prefix_count[i] = max(prefix_count[i-1],pre_computed[i]);
+        if(pre_computed[i] > prefix_count[i-1]){
+            prefix_num[i] = i;
+        }
+        else{
+            prefix_num[i] = prefix_num[i-1];
+        }
+    }
     while(t--){
-        vector<int>pre_computed(5000006,0);
         int n;
         cin >> n;
-        int maxx = -1;
-        int num = 0;
-        for(int i = 1;i<n;i++){
-            int count = 0;
-            int a = i;
-            while(a>1){
-                if(a<5000001 && pre_computed[a]!=0){
-                    count+=pre_computed[a];
-                    break;
-                }
-                if((a%2) == 0){
-                    a=a/2;
-                }
-                else{
-                    a = a*3 + 1;
-                }
-                count++;
-            }
-            pre_computed[i] = count;
-            if(pre_computed[i] >= maxx){
-                maxx = pre_computed[i];
-                num = i;
-            }
-        }
-        cout << num << endl;
+        cout << prefix_num[n] << endl;
     }
     return 0;
 }
