@@ -215,7 +215,7 @@ signed main(){
         }
         pre_computed[i] = count;
         prefix_count[i] = max(prefix_count[i-1],pre_computed[i]);
-        if(pre_computed[i] > prefix_count[i-1]){
+        if(pre_computed[i] >= prefix_count[i-1]){
             prefix_num[i] = i;
         }
         else{
