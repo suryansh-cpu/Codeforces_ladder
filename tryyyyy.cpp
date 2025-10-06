@@ -7,7 +7,7 @@
 using namespace std;
 
 int countt(int a, int b){
-    vector<vector<int>>visited(a,vector<int>(b));
+    // vector<vector<int>>visited(a,vector<int>(b));
     queue<pair<int,int>>bfs;
     int ans = 0;
     bfs.push({0,0});
@@ -19,11 +19,11 @@ int countt(int a, int b){
             if(d.first == a-1 && d.second == b-1){
                 ans++;
             }
-            else if(visited[d.first][d.second] == 1){
-                continue;
-            }
+            // else if(visited[d.first][d.second] == 1){
+            //     continue;
+            // }
             else{
-                visited[d.first][d.second] = 1;
+                // visited[d.first][d.second] = 1;
                 if(d.second+1<b)bfs.push({d.first,d.second+1});
                 if(d.first+1<a)bfs.push({d.first+1,d.second});
             }
