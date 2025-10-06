@@ -202,6 +202,7 @@ signed main(){
         while(a>1){
             if(a<5000001 && pre_computed[a]!=0){
                 count+=pre_computed[a];
+                count++;
                 break;
             }
             if((a%2) == 0){
