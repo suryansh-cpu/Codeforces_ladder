@@ -99,7 +99,7 @@ signed main(){
             ans.pb({a,i});
         }
         int finall = 0;
-        sort(ans.begin(),ans.end(),greater<int>());
+        sort(ans.begin(),ans.end(),greater<pair<int,int> >());
         for(int i = 0;i<n;i++){
             int pt = ans[i].second;
             people[pt] = -1;
