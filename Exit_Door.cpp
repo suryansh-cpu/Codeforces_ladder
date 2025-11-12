@@ -88,7 +88,7 @@ signed main(){
     int t;
     cin >> t;
     while(t--){
-        int ans = 0,n=0;
+        int n=0;
         cin >> n;
         vector<int>people;
         vector<pair<int,int> >ans;
@@ -98,6 +98,27 @@ signed main(){
             people.pb(a);
             ans.pb({a,i});
         }
+        int finall = 0;
+        sort(ans.begin(),ans.end(),greater<int>());
+        for(int i = 0;i<n;i++){
+            int pt = ans[i].second;
+            people[pt] = -1;
+            int right = 0,left = 0;
+            for(int j = pt+1;j<n;j++){
+                if(people[j] == -1)continue;
+                else {
+                    right++;
+                }
+            }
+            for(int j = pt-1;j>=0;j--){
+                if(people[j]==-1)continue;
+                else{
+                    left++;
+                }
+            }
+            finall += min(left,right);
+        }
+        cout << finall << endl;
     }
     return 0;
 }
