@@ -89,11 +89,12 @@ signed main(){
     cin >> w >> b;
     w = w*1000;
     int ans = (w/b);
-    if(ans*b == w){
-        cout << ans << endl;
-    }
-    else{
-        cout << ans+1 << endl;
-    }
+    // if(ans*b == w){
+    //     cout << ans << endl;
+    // }
+    // else{
+    //     cout << ans+1 << endl;
+    // }
+    cout << ans + 1 << endl;
     return 0;
 }
