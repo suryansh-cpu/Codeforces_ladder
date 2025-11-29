@@ -88,7 +88,7 @@ signed main(){
     int n,m;
     cin>>n>>m;
     unordered_map<int,int>bird_count;
-    vector<int>checkpoints(m,0);
+    vector<int>checkpoints(m+1,0);
     rep(i,n){
         int a,b;
         cin >> a >> b;
